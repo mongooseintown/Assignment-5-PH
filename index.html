@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- TAILWIND CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- FONTAWASOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="relative">
+    <header class="bg-[#FFFFFF]">
+        <nav class="m-auto max-w-[95%] flex justify-between py-[24px]">
+            <!-- LOGO -->
+            <div class="">
+                <a href="#" class="">
+                    <img src="./assets/mainLogo.png" alt="">
+                </a>
+            </div>
+            <!-- ESSENTIAL COUNTABLE CONTENTS -->
+            <div class="sm:flex justify-end items-center gap-[20px] hidden">
+                <div class="rounded-[50px] flex gap-[10px] px-[35.5px] py-[11px] bg-[#41FF6B]/10">
+                    <h1 class="i font-black text-[16px] leading-[24px] text-[#000000]">
+                        0
+                    </h1>
+                    <div>
+                        <img src="./assets/heart.png" alt="" class="w-[25.79px]">
+                    </div>
+                </div>
+                <div class="rounded-[50px] flex gap-[10px] px-[20px] py-[14px] bg-[#41FF6B]/10">
+                    <h1 class="i font-black text-[16px] leading-[24px] text-[#000000]">
+                        0
+                    </h1>
+                    <div>
+                        <img src="./assets/coin.png" alt="" class="w-[23.25px]">
+                    </div>
+                </div>
+                <div
+                    class="border flex px-[36px] py-[14px] rounded-[50px] i font-semibold text-[16px] leading-[24px] text-[#FFFFFF] bg-[#00A63E] gap-[5.5px]">
+                    <h1>
+                        0
+                    </h1>
+                    <p>
+                        Copy
+                    </p>
+                </div>
+            </div>
+            <!-- HAMBURGER MENU ICON FOR MOBILE DEVICES -->
+            <div class="sm:hidden flex justify-center items-center text-[25px]" id="hamburgerBarsIcon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section
+            class="bg-[linear-gradient(to_right,#013223_0%,#006747_50%,#013223_100%)] flex flex-col justify-center items-center gap-[11px] py-[21px]">
+            <img src="./assets/logo-dark.png" alt="" class="w-[92px]">
+            <h1 class="h font-semibold text-[40px] text-[#FFFFFF]">
+                জরুরি সেবা ডিরেক্টরি
+            </h1>
+            <p class="h font-semibold text-[20px] text-[#FFFFFF]">
+                Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of
+                Bangladesh
+            </p>
+        </section>
+    </main>
+    <!-- HAMBURGERMENU -->
+    <div
+        class="absolute w-[50%] h-[100vh] top-0 right-[-100%] bg-white/20 backdrop-blur-md shadow-lg hidden" id="hamburgerSection">
+        <div class="flex flex-col h-full">
+            <!-- CROSS -->
+            <div class="flex justify-end">
+                <a href="#" class="p-[15px]" id="hamburgerCrossMark">
+                    <i class="fa-solid fa-xmark text-red-600 font-bold"></i>
+                </a>
+            </div>
+            <!-- ESSENTIAL COUNTABLE CONTENTS -->
+            <div class="flex flex-col justify-center h-full gap-[50px]">
+                <div class="rounded-[50px] flex justify-center gap-[10px] px-[35.5px] py-[11px] bg-[#41FF6B]/10">
+                    <h1 class="i font-black text-[16px] leading-[24px] text-[#000000]">
+                        0
+                    </h1>
+                    <div>
+                        <img src="./assets/heart.png" alt="" class="w-[25.79px]">
+                    </div>
+                </div>
+                <div class="rounded-[50px] flex justify-center gap-[10px] px-[20px] py-[14px] bg-[#41FF6B]/10">
+                    <h1 class="i font-black text-[16px] leading-[24px] text-[#000000]">
+                        0
+                    </h1>
+                    <div>
+                        <img src="./assets/coin.png" alt="" class="w-[23.25px]">
+                    </div>
+                </div>
+                <div
+                    class="border flex justify-center px-[36px] py-[14px] rounded-[50px] i font-semibold text-[16px] leading-[24px] text-[#FFFFFF] bg-[#00A63E] gap-[5.5px]">
+                    <h1>
+                        0
+                    </h1>
+                    <p>
+                        Copy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CUSTOM JS -->
+    <script src="./js/app.js"></script>
+    <!-- DAISY UI -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+
+</html>
