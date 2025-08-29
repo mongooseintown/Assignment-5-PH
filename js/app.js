@@ -68,3 +68,18 @@ const clearBtn = document.querySelector('.clear-btn');
 clearBtn.addEventListener('click', function () {
     historyList.innerHTML = '';
 })
+
+const heartIcons = document.querySelectorAll('.fa-heart');
+let hearts = 0;
+function updateHeartNumber() {
+    const mainHeartNumber = document.querySelector('.main-heart-number');
+    mainHeartNumber.innerText = hearts;
+    const hamburgerHeartNumber = document.querySelector('.h-main-heart-number');
+    hamburgerHeartNumber.innerText = hearts;
+}
+for (let i = 0; i < heartIcons.length; i++) {
+    heartIcons[i].addEventListener('click', function () {
+        hearts++;
+        updateHeartNumber();
+    });
+}
