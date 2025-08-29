@@ -1,5 +1,4 @@
 const hamburger_bars_icon = document.getElementById('hamburgerBarsIcon');
-// console.log(hamburger_bars_icon);
 hamburger_bars_icon.addEventListener('click', function () {
     const hamburger_section = document.getElementById('hamburgerSection');
     hamburger_section.style.right = '0';
@@ -10,7 +9,7 @@ const hamburger_cross_mark = document.getElementById('hamburgerCrossMark');
 hamburger_cross_mark.addEventListener('click', function () {
     const hamburger_section = document.getElementById('hamburgerSection');
     hamburger_section.style.right = '100%';
-    hamburger_section.style.display = 'hidden';
+    hamburger_section.style.display = 'none';
 })
 
 let coins = 100;
@@ -40,15 +39,15 @@ for (let i = 0; i < callBtn.length; i++) {
                 li.className = 'p-[16px] flex justify-between items-center bg-[#FAFAFA] rounded-[8px]';
                 const leftDiv = document.createElement('div');
                 const nameP = document.createElement('p');
-                nameP.className = 'h font-semibold text-[16px] text-[#111111]';
+                nameP.className = 'h font-normal text-[18px] text-[#111111]';
                 nameP.innerText = name;
                 const numberP = document.createElement("p");
-                numberP.className = "r text-[14px] text-[#5C5C5C]";
+                numberP.className = "h font-normal text-[18px] text-[#5C5C5C] mt-4px";
                 numberP.innerText = number;
                 leftDiv.appendChild(nameP);
                 leftDiv.appendChild(numberP);
                 const timeSpan = document.createElement("span");
-                timeSpan.className = "r text-[14px] text-[#5C5C5C]";
+                timeSpan.className = "h font-normal text-[18px] text-[#111111]";
                 timeSpan.innerText = time;
                 li.appendChild(leftDiv);
                 li.appendChild(timeSpan);
@@ -64,11 +63,13 @@ for (let i = 0; i < callBtn.length; i++) {
     })
 }
 
+// Functionality of CLEAR-BUTTON
 const clearBtn = document.querySelector('.clear-btn');
 clearBtn.addEventListener('click', function () {
     historyList.innerHTML = '';
 })
 
+// Functionality of HEART
 const heartIcons = document.querySelectorAll('.fa-heart');
 let hearts = 0;
 function updateHeartNumber() {
@@ -81,5 +82,26 @@ for (let i = 0; i < heartIcons.length; i++) {
     heartIcons[i].addEventListener('click', function () {
         hearts++;
         updateHeartNumber();
+    });
+}
+
+// Functionality of COPY-BUTTON
+const copyBtns = document.querySelectorAll('.cpy-btn');
+let copies = 0;
+function updateCopyNumber()
+{
+    const mainCopyNumber = document.querySelector('.copyShow');
+    mainCopyNumber.innerText = copies;
+    const hamburgerCopyNumber = document.querySelector('.hCopyShow');
+    hamburgerCopyNumber.innerText = copies;
+}
+for (let i = 0; i < copyBtns.length; i++) {
+    copyBtns[i].addEventListener('click', function () {
+        const card = this.closest('.crd');
+        const name = card.querySelector('.name').innerText;
+        const number = card.querySelector('.number').innerText;
+        alert(name + " (" + number + ") copied!");
+        copies++;
+        updateCopyNumber();
     });
 }
